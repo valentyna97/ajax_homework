@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ajax_classwork</title>
+</head>
+
+<body>
+    <h1>AJAX</h1>
+    <p>Page loaded: <span class="page-loaded"></span></p>
+
+    <section>
+        <h1>Loading HTML</h1>
+        <div class="html-placeholder"></div>
+        <button class="load-html-ajax">Load</button>
+    </section>
+    <section>
+        <h2>loading Json</h2>
+        <div>
+        <p>Client name:<span class="client-name"></span></p>
+        <p>Account balance:<span class="account-balance"></span></p>
+        </div>
+        
+        <button class="load-json-ajax">Load</button>
+    </section>
+    <section>
+        <h2>Send</h2> 
+        <form class = "login-form">
+            <label>
+                User name: <input type="text" name="user-name">
+            </label>
+            <br>
+             <label>
+                Password: <input type="password" name="password">
+            </label>
+            <input type="submit">
+            <br>
+            <p class = "message-box"></p>
+        </form>
+    </section>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
