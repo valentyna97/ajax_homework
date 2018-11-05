@@ -4,7 +4,7 @@ document.querySelector( '.load-html-ajax').addEventListener('click', loadHtmlAja
 
 function loadHtmlAjax() {
     const xhr = new XMLHttpRequest();
-    xhr.onereadystatechange = function() {
+    xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status ===200 ){
             document.querySelector('.html-placeholder').innerHTML = xhr.responseText;
         }
@@ -18,7 +18,7 @@ document.querySelector( '.load-json-ajax').addEventListener('click', loadJsonAja
 
 function loadJsonAjax() {
     const xhr = new XMLHttpRequest();
-    xhr.onereadystatechange = function() {
+    xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status ===200 ) {
             const clientData = JSON.parse(xhr.responseText);
             document.querySelector('.client-name').innerText = clientData.name;
@@ -34,7 +34,7 @@ document.querySelector('.login-form input[type=submit]')
 function submitForm (e) {
     e.preventDefault();
     const xhr = new XMLHttpRequest();
-     xhr.onereadystatechange = function() {
+     xhr.onreadystatechange = function() {
          if (xhr.readyState === 4 && xhr.status ===200 ){
              document.querySelector('.message-box').innerHTML = '<h3> Welcome!</h3>';
          }else if (xhr.readyState === 4 && xhr.status !== 200){
